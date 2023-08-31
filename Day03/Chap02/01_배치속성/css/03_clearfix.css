@@ -1,0 +1,40 @@
+
+.container {
+  position: relative;
+  width: 1024px;
+  min-height: 500px;
+  border: 1px dashed orange;
+  margin: auto;
+  }
+  
+  .item {
+    width: 300px;
+    height: 200px;
+  }
+
+  .inner::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+  
+  h1 { text-align: center; }
+  
+  .left { 
+    float: left; 
+    background-color: pink;
+    height: 600px;
+    border: 3px solid red;
+  }
+
+  .right { 
+    float: right; 
+    background-color: lightblue;
+    height: 400px;
+    border: 3px solid blue;
+  }
+
+  .next { 
+    width: 100%;
+    background-color: cornflowerblue;
+  }

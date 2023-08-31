@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  width: 1200px;
+  border: 3px solid orange;
+  text-align: center; 
+ }
+ 
+ .item {
+   width: 100px;
+   height: 100px;
+   line-height: 100px;
+   border:1px solid gray;
+   /* border1-solid-gray */
+   background-color: #ddd;
+ }
+
+ .box1 {
+  padding: 20px;
+  line-height: 100px;
+  box-sizing: content-box;
+      /*
+      content-box
+      : 컨텐츠 크기만 박스의 크기로 지정
+      */
+ }
+
+ .box2 {
+  padding: 20px;
+  line-height: 60px;
+  box-sizing: border-box;
+      /*
+      border-box
+      : content+padding+border를 포함하여 박스의 크기로 지정 
+      */
+ }

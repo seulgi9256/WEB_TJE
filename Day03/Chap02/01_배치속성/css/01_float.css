@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  width: 1024px;
+  border: 5px dashed orange;
+  margin: auto;
+}
+
+.item {
+  border: 2px solid #ddd;
+  height: 330px;
+}
+
+img.left { float: left;}        /* fl */
+img.right { float: right;}      /* flr */
+
