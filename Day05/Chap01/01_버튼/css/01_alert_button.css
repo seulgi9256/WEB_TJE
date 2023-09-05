@@ -1,10 +1,15 @@
+* { box-sizing: border-box; }
+
 .btn {
   border: none;
   padding: 14px 28px;
   cursor: pointer;
   color: white;
   font-weight: bold;
+  text-align: center;
 }
+
+.btn.lg { display: block; width: 100%; margin: 10px 0;}
 
 .success { background-color: #04aa6d; }
 .success:hover { background-color: #46a049; } 
@@ -16,7 +21,7 @@
 
 .warning { background-color: #ff9800;}
 .warning:hover { background-color: hsl(36, 81%, 79%);}
-.warning:active { background-color: #f7a223;}
+.warning:active { background-color: #c57a0a;}
 
 .danger { background-color: #f44366;}
 .danger:hover { background-color: #da190b;}

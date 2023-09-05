@@ -1,0 +1,146 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* reset */
+a { text-decoration: none; color: black; }  
+ul { list-style-type: none;}
+
+header {
+  width: 100%;
+  border: 1px solid black;
+}
+
+/* util */
+.util { 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
+  padding: 10px; 
+  background-color: #dce6ff;
+}
+
+.util .util-menu { 
+  
+  /* float: right;  */
+  display: flex;
+  column-gap: 14px;
+  margin: 0 5px;
+}
+
+.util .util-menu li {
+   /* display: inline-block; */
+   /* margin: 0 14px; */
+}
+/* .util .util-menu::after {
+  display: block;
+  content: '';
+  clear: both;
+} */
+
+/* menu */
+.menu {
+  /* position: relative;
+  height: 80px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* menu-left */
+.menu .menu-left {
+  /* position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); */
+}
+
+.menu .menu-left a,
+.menu .menu-right a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  /* line-height: 80px; */
+  /* text-align: center; */
+  background-color: #6683f6;
+  font-size: 30px;
+  color: white;
+}
+
+
+.menu .menu-left a i {}
+
+/* menu-center */
+.menu .menu-center {
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
+.menu .menu-center nav {
+
+}
+.menu .menu-center nav ul {
+  display: flex;
+  align-items: center;
+}
+.menu .menu-center nav ul li {
+  /* display: inline-block; */
+  height: 80px;
+  /* line-height: 80px; */
+}
+
+.menu .menu-center nav ul li a {
+  /* display: inline-block;
+  width: 100%;
+  height: 100%; */
+  padding: 0 32px;
+  font-weight: bold;
+}
+
+.menu .menu-center nav ul li a:hover {
+  background-color: #668ef6;
+  color: white;
+}
+/* menu-right */
+.menu .menu-right {
+  /* position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); */
+}
+
+.mobile { display: none;}
+
+
+/* 반응형 */
+/* 디바이스 가로 크기 960px 이하인 경우 */
+@media screen and (max-width: 960px) {
+  .pc { display: none; }
+  .mobile {display: inherit;}
+
+  nav.mobile {}
+  nav.mobile ul {}
+  nav.mobile ul li {
+    /* height: 60px;
+    line-height: 60px;
+    text-align: center; */
+    border-bottom: 1px solid black;
+  }
+
+  nav.mobile ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+  }
+  
+  nav.mobile ul li a:hover {
+    background-color: royalblue;
+    color: white;
+  }
+  
+}
+

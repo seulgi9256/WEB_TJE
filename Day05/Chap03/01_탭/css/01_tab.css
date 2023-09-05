@@ -1,0 +1,58 @@
+.container {
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+  border: 1px solid orange;
+}
+
+.tab-box {
+  width: 600px;
+  margin: 50px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+[type="radio"] { display: none; }
+
+/* 탭 (label) */
+.tab-item {
+  display: inline-block;
+  width: calc(100% / 3);
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #333;
+  user-select: none;
+}
+
+.tab-box input:checked + label, 
+.tab-item:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* 내용 영역 */
+.tab-content {
+  padding: 40px;
+  text-align: center;
+  overflow: hidden;
+  clear: both;
+  display: none;
+}
+
+#tab1:checked ~ #tab1-content {
+  display: block;
+
+}
+
+#tab2:checked ~ #tab2-content {
+  display: block;
+}
+
+#tab3:checked ~ #tab3-content {
+  display: block;
+}

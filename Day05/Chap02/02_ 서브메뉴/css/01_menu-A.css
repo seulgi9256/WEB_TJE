@@ -1,0 +1,66 @@
+* {  margin: 0; padding: 0; box-sizing: border-box; }
+
+a { text-decoration: none; color: black; }  
+ul { list-style-type: none;}
+
+.container {
+  width: 1200px;
+  height: 900px;
+  margin: 0 auto;
+  border: 3px dashed orange;
+}
+
+header { 
+  /* display: flex; */
+  justify-content: center;
+
+}
+
+header nav {
+  height: 60px;
+}
+
+header nav .mainmenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+    /* line-height: 60px; */
+}
+
+/* 메인메뉴 */
+header nav .mainmenu > li {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid orange;
+}
+
+header nav .mainmenu > li:hover {
+  background-color: cornflowerblue;
+}
+
+header nav .mainmenu > li:hover > a {
+  color: white;
+}
+
+header nav .mainmenu > li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+header nav .mainmenu > li:hover .submenu { display: block; }
+
+/* 서브메뉴 */
+header nav .submenu {  display: none; }
+header nav .submenu li { background-color: #ddd;}
+header nav .submenu li a { }
+header nav .submenu li:hover { background-color: cornflowerblue;}
+header nav .submenu li:hover a { color: white;}
