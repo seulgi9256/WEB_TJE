@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  border: 10px solid black;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: calc(800px*3);
+
+  animation-name: slide;                   /* 애니메이션 이름 */
+  animation-duration: 16s;                 /* 재생시간 */
+  animation-iteration-count: infinite;           /* 반복 횟수 */
+
+}
+
+.slide img {
+  width: 800px;
+  height: 400px;
+  float: left;
+}
+
+@keyframes slide {
+  /* 0% { transform: translateX(0px); }
+  50%{ transform: translateX(-800px); }
+  100%{ transform: translateX(-1600px); } */
+
+  33.333% { left : 0; }
+  66.666% { left : calc(-800px * 1); }
+  100% { left : calc(-800px * 2);  }
+  
+}

@@ -1,0 +1,206 @@
+/* 초기화 */
+
+* { margin: 0; padding: 0;}
+
+body {
+  background-color: darkgray;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  /* box-sizing: border-box; */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 전체영역 */
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-x : hidden;
+  /* background-color: yellow; */
+}
+
+/* 로그인 영역 */
+.login-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* inner */
+#login {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+
+/* 로고 */
+#login .login-logo {
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+#login .login-logo img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  /* object-fit: cover */
+}
+
+/* 아이디/비밀번호 */
+#login .login-inputbox {
+  position: relative;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+#login .login-inputbox input {
+  width: 100%;
+  height: 32px;
+  padding-left: 5px;
+  flex: 1rem;
+  border-bottom: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+#login .login-inputbox input::placeholder {
+  color: #aaa;
+}
+
+/* 입력상자 - 밑줄 */
+#login .login-inputbox input ~ .border {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 0;
+  border: 0 solid royalblue;
+
+}
+
+/* 
+  : focus
+  - input 태그에 마우스 커서가 놓인 상태를 선택
+*/
+#login .login-inputbox input:focus ~ .border {
+  width: 100%;
+  border-width: 1px;
+  transition: width 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#login .login-remember {
+  height: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#login .login-remember label {
+  position: relative;
+  padding-left: 25px;
+  color: #aaa;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+#login .login-remember label input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: 0;
+  cursor: pointer;
+}
+
+#login .login-remember label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+}
+
+/* 체크 표시를 가상 요소로 만들기 */
+#login .login-remember label .checkmark::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 4px;
+  height: 8px;
+  border: 3px solid white;
+
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+
+}
+
+/* 
+  ::checked
+  - input 체크박스가 체크된 상태를 선택
+*/
+#login .login-remember label input:checked ~ .checkmark {
+  background-color: royalblue;
+
+}
+
+#login .login-remember label input:checked ~ span {
+  color: royalblue;
+  
+}
+
+#login .login-remember label span {
+  user-select: none;   /* 드래그 선택 없애기 */
+}
+
+/* 버튼 */
+
+#login .login-btnbox {
+  /* width: 100%; */
+  height: 50px;
+  margin: 10px 0;
+}
+
+#login .login-btnbox .login-btn {
+  display: block;
+  background-color: royalblue;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 50px;
+  border-radius: 10px;
+}
+
+
+#login .login-btnbox .login-btn:hover {
+filter: brigthness(90%);
+box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+
+}
+
+/* 카피 라이트 */
+#login .copy {
+  height: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#login .copy p {
+  font-size: 0.7rem;
+  text-align: center;
+}

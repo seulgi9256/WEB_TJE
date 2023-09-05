@@ -45,4 +45,6 @@
 
 
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
-
+.skew1:hover { transform: skew(45deg, 45deg);}
+.skew2:hover { transform: skewX(45deg); }
+.skew3:hover { transform: skewY(45deg); }

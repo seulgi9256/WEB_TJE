@@ -44,10 +44,27 @@
 */
 
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
-.scale1:hover {  }
-.scale2:hover {  }
-.scale3:hover {  }
+.scale1:hover { transform:scale(2); }
+.scale2:hover { transform: scaleX(2); }
+.scale3:hover { transform: scaleY(2); }
 
 
 /* 이미지 확대 박스 적용하기 */
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
+.img-box { 
+    width: 100%;
+    height: 160px;
+  /*  border: 3px solid blue; */
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.img-box img:hover {
+    transform: scale(1.3);
+  /*  transition: all 0.5s;  */
+    cursor: pointer;
+}

@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  border: 10px solid black;
+  /* overflow: hidden; */
+}
+
+.slide {
+  width: 100%;
+}
+
+.slide .item {
+  position: absolute;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+.slide .item:not(:first-of-type) {
+  opacity: 0;  /* 투명도 : 0~1 */
+
+}
+
+.slide .item:nth-of-type(1) { animation-name: slide1;}
+.slide .item:nth-of-type(2) { animation-name: slide2;}
+.slide .item:nth-of-type(3) { animation-name: slide3;}
+
+.slide img {
+  width: 800px;
+  height: 400px;
+}
+
+@keyframes slide1 {
+  33.333% {  opacity: 1; }
+  66.666% {  opacity : 0; }
+  100% {  opacity : 0;  }
+}
+
+@keyframes slide2 {
+  33.333% { opacity : 0; }
+  66.666% {  opacity : 1; }
+  100% {  opacity : 0;  }
+}
+
+@keyframes slide3 {
+  33.333% {  opacity: 0; }
+  66.666% {  opacity : 0; }
+  100% { opacity : 1;  }
+}

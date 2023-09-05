@@ -9,10 +9,10 @@
     background-color: royalblue;
     /* 애니메이션 */
     /* 👩‍💻TODO: 여기에 작성해보세요:) */
-    animation-name: ;                   /* 애니메이션 이름 */
-    animation-duration: ;                 /* 재생시간 */
-    animation-timing-function: ;      /* 타이밍 함수 */
-    animation-iteration-count: ;           /* 반복 횟수 */
+    animation-name: ball;                   /* 애니메이션 이름 */
+    animation-duration: 10s;                 /* 재생시간 */
+    animation-timing-function: linear;      /* 타이밍 함수 */
+    animation-iteration-count: infinite;           /* 반복 횟수 */
 }
 
 #ball h1 {
@@ -23,3 +23,14 @@
 
 /* 👩‍💻TODO: 여기에 작성해보세요:) */
 /* 애니메이션의 변경지점을 지정하는 속성 */
+
+@keyframes ball {
+    /* 시작지점 - from or 0% */
+    /* 종료지점 - to or 100% */
+    /* from {left: 0; }
+    to { left: 1900px; } */
+
+    0% { left: 0;}
+    50% { left: 1000px; transform: rotate(360deg) scale(0.5) translateY(100px);}
+    100% { left: 0;}
+}
