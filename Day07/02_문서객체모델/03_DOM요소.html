@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 요소</title>
+  <script>
+  
+    // 문서 준비 이벤트
+    document.addEventListener('DOMContentLoaded', () => {
+
+      let head = document.head
+      let body = document.body
+      let title = document.title
+      let url = document.URL
+      let aList = document.anchors
+      let form = document.forms
+      let img = document.images
+
+      console.log(head);
+      console.log(body);
+      document.getElementById('title').innerHTML = title
+      document.getElementById('url').innerHTML = url
+      console.log(aList);
+      console.log(aList[0]);
+      console.log(aList[1]);
+      console.log(form);
+      console.log(form[0]);
+      console.log(form[1]);
+    //  form[0].submit();   // form 태그 제출
+
+      console.log(img);
+      console.log(img[0]);
+      console.log(img[1]);
+      console.log(img[2]);
+      img[2].src = 'X.jpg'
+    })
+  </script>
+</head>
+<body>
+  <h1 id="title"></h1>
+  <h3 id="url"></h3>
+  <ul>
+      <li><a href="http://www.naver.com" name="1">www.naver.com</a></li>
+      <li><a href="http://www.kakao.com" name="2">www.kakao.com</a></li>
+      <!-- <li><a href="http://www.naver.com">www.naver.com</a></li>
+      <li><a href="http://www.kakao.com">www.kakao.com</a></li> -->
+  </ul>
+  <form action=""></form>
+  <form action=""></form>
+  <form action=""></form>
+
+  <img src="" alt="">
+  <img src="" alt="">
+  <img src="" alt="">
+  <img src="" alt="">
+</body>
+</html>

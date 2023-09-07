@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while</title>
+  <script>
+
+
+    let num = prompt('반복 횟수를 입력해주세요')
+    num = Number(num)
+
+    // num : 5
+    // 조건 - num : 5 4 3 2 1
+
+    while( num > 0 ) {
+      // document.write()       : 페이지에 html 요소를 출력
+      // document.writeln()     : 페이지에 html 요소를 출력 후 줄바꿈
+      // html에서 엔터, 실제 화면에서는 띄어쓰기
+      document.write(`<h3> ${num} </h3>`)
+      console.log(num);
+      num--;
+    }
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

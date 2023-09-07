@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>switch</title>
+  <script>
+    const input = prompt('숫자를 입력해주세요')
+
+    // switch(표현식) { case 값 : ~ }
+    // : 표현식과 값이 일치하는 case 문으로 이동한다.
+
+    switch (input%2) {
+      case 0:
+          alert('짝수입니다.')
+          break;
+      case 1:
+          alert('홀수입니다')
+          break;
+      default:
+          alert('숫자가 아닙니다')
+          break;
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

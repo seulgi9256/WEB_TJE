@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소 선택 - name</title>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // name 으로 요소 선택 : getElementsByName()
+      const inputs = document.getElementsByName('input')
+      const input = inputs[0]
+
+      // 입력 태그에 키 입력 시, h1 태그에 텍스트를 출력
+      input.addEventListener('keyup', (event) => {
+        const text = document.getElementById('text')
+
+        // input.value : input 태그의 value 속성의 값 -> 입력한 텍스트
+        text.textContent = input.value
+      })
+
+    })
+
+  </script>
+</head>
+<body>
+  <h1 id="text">입력해보세요!</h1>
+  <input type="text" name="input" placeholder="입력해보세요!" value="">
+
+</body>
+</html>

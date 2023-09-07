@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scope</title>
+  <script>
+    function test() {
+      var local = 10
+
+      if(local > 0 ){
+         let local = 20
+         console.log(`local : ${local}`);
+      }
+      console.log(`local : ${local}`);
+    }
+
+    function test2() {
+      let local2 = 10
+      //let local2 = 100
+      if (local2 > 0 ){
+
+      //  console.log(`local2 : ${local2}`);
+
+        let local2 = 20
+        console.log(`local2 : ${local2}`);
+
+      }
+      console.log(`local2 : ${local2}`);
+    }
+
+    test()
+    test2()
+
+    console.log(`test3 : ${test3}`);
+   // console.log(`test4 : ${test4}`);
+    var test3 = 'test'
+   // let test4 = 'test'
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
