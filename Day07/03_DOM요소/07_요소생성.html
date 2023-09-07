@@ -45,7 +45,7 @@
     // 이벤트 핸들러 추가
     btnCreate.addEventListener('click', addList)
     btnRemove.addEventListener('click', removeList)
-    input.addEventListener('keypress', enter)
+    input.addEventListener('keyup', enter)
 
     })
 
@@ -80,8 +80,11 @@
     // 엔터 입력
     function enter(event) {
 
-        if(event.keyCode = '13'){
+        if(event.keyCode == '13'){
           addList();
+        }
+        if(event.keyCode == '46'){
+          removeList();
         }
     }
 
