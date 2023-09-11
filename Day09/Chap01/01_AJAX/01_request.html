@@ -95,6 +95,20 @@
 <button type="button" onclick="deleteXML()">AJAX 요청(XML)</button>
 </form>
 
+<hr>
+<h3>게시글 목록</h3>
+<table border="1" id="board-list">
+  <tr id="board-title">
+    <th width="50">번호</th>
+    <th width="300">제목</th>
+    <th width="100">작성자</th>
+    <th width="200">등록일자</th>
+    <th width="200">수정일자</th>
+  </tr>
+  <tr id="board-data">
+    <td colspan="5" align="center">조회된 내역이 없습니다.</td>
+  </tr>
+</table>
 <div style="height: 500px"></div>
   <script>
     
@@ -128,6 +142,7 @@
         //  console.log(response);
           let board = JSON.parse(response)
 
+
           // document.write(`title : ${board.title} <br>`)
           // document.write(`writer : ${board.writer} <br>`)
           // document.write(`content : ${board.content} <br>`)
@@ -147,7 +162,9 @@
   }    
   
   let boardNo = document.getElementById('boardNo').value
-  let url = "http://192.168.30.119:8080/api/board?boardNo=" + boardNo
+   let url = "http://192.168.30.119:8080/api/board?boardNo=" + boardNo
+  // let url = "http://127.0.0.1:8080/api/board?boardNo=" + boardNo
+
 
 // 요청 설정
 // request.open("요청메소드", url, 비동기여부)
@@ -411,6 +428,9 @@ request.onreadystatechange = function() {
     let response = request.responseText
     alert(response)
 
+    // location.href = './list.html'
+    // location.href = 'http://192.168.30.119:8080/board/list'
+    // location.assign('http://192.168.30.119.8080/board/list')
   }
   
   // 에러 발생
@@ -427,6 +447,63 @@ request.setRequestHeader("content-Type", "application/xml")
 
 request.send( data )
 }
+
+
+// 게시글 목록 요청
+function getList() {
+  let request = new XMLHttpRequest()
+
+  // 응답 확인
+  request.onreadystatechange = function() {
+      
+      let response = ''
+      if( request.readyState == request.DONE && request.status == 200) {
+        
+        response = request.responseText
+
+        console.log('게시글 목록 데이터 : ');
+        console.log(response);
+
+        // JSON.parse() : text -> JSON 변환
+        let boardList = JSON.parse(response)
+
+        // 데이터가 없을 떄
+        
+        if( boardList.length == 0 ){
+        alert('조회된 내역이 없습니다.')
+        }
+
+        // 데이터 있을 때
+        else {
+   
+            let $boardData = document.getElementById('board-data')
+            let $boardList = document.getElementById('board-list')
+
+            $boardData.remove()
+
+            for( const board of boardList) {
+              let tr = `<tr>
+                          <td>${board.boardNo}</td>
+                          <td>${board.title}</td>
+                          <td>${board.writer}</td>
+                          <td>${board.regDate}</td>
+                          <td>${board.updDate}</td>
+                        </tr>`
+              $boardList.innerHTML += tr
+            }
+        }
+      }
+    }
+      // 요청 설정
+      let url = 'http://192.168.30.119:8080/api/board'
+
+      request.open("GET", url, true)
+      request.setRequestHeader("content-Type", "application/json")
+      request.send( )
+
+  }
+
+  getList()
 
   </script>
 </body>
