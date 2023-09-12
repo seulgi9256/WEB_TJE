@@ -50,28 +50,28 @@ $(function() {
           rotate: false,
       },
       
-      // If we need pagination
-      pagination: {
-          el: '.swiper-pagination',
-          type:   'bullets',          // 'bullets'        : ● ● ●
-                                      // 'fraction'       : (현재번호/전체번호)
-                                      // 'progressbar'    : 진행률(게이지)
-          clickable: true,
-      },
+    //   // If we need pagination
+    //   pagination: {
+    //       el: '.swiper-pagination',
+    //       type:   'bullets',          // 'bullets'        : ● ● ●
+    //                                   // 'fraction'       : (현재번호/전체번호)
+    //                                   // 'progressbar'    : 진행률(게이지)
+    //       clickable: true,
+    //   },
 
-      // Navigation arrows
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
+    //   // Navigation arrows
+    //   navigation: {
+    //       nextEl: '.swiper-button-next',
+    //       prevEl: '.swiper-button-prev',
+    //   },
 
       // And if we need scrollbar
-      scrollbar: {
-          el: '.swiper-scrollbar',    // 스크롤바가 적용될 요소
-          hide: true,                 // 스크롤바 숨김(직접 움직일 때는 보이고, 그외에 숨김)
-          draggable: true,            // 스크롤바 드래그 가능 여부
-          snapOnRelease: true,        // 스크롤바 놓을 때, 슬라이드 위치 맞춤
-      },
+    //   scrollbar: {
+    //       el: '.swiper-scrollbar',    // 스크롤바가 적용될 요소
+    //       hide: true,                 // 스크롤바 숨김(직접 움직일 때는 보이고, 그외에 숨김)
+    //       draggable: true,            // 스크롤바 드래그 가능 여부
+    //       snapOnRelease: true,        // 스크롤바 놓을 때, 슬라이드 위치 맞춤
+    //   },
 
 
     });

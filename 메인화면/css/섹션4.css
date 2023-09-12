@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+
+.container4 {
+  /* display: flex; */
+  
+  width: 960px;
+  min-height: 400px;
+  margin: 0 auto;
+  border: 3px dashed orange;
+}
+
+.container4 .wrap {
+  background-color: rgb(157, 187, 243);
+}
+
+.wrap {
+  display: flex;
+  width: 960px;
+  height: 480px;
+  margin: 50px auto;
+  border: 3px dashed orange;
+}
+
+.wrap img { 
+  /* display: flex; */
+  /* position: right; */
+  position: relative;
+  right: 10px;
+  height: 100%;
+  width: 50%; 
+}
+
+.content2 {
+  display: inline-block;
+  padding-right: 30px;
+  position: left;
+  border: 3px dashed pink;
+  
+}
+
+span {
+  display: inline-block;
+}
+
+button {
+  position: relative;           /* 초기 위치를 기준으로 위치 설정 */
+  border: 3px solid black;
+  /* display: inline-flex;
+  position: relative; */
+  /* padding-bottom: 10px; */
+  padding: 14px 28px;
+  border: none;
+  padding: 13px 25px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #6683f6;
+  font-size: 15px;
+  color: black;
+  border-radius: 10px;
+  bottom: 100px; right: 200px;
+}

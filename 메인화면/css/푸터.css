@@ -1,0 +1,75 @@
+* {  margin: 0; padding: 0; box-sizing: border-box; }
+
+a { 
+  text-decoration: none; 
+  color: white; 
+}  
+
+ul { 
+  list-style-type: none;
+  color: white;
+}
+
+.container {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+footer { 
+  /* display: flex; */
+  background-color: black;
+  /* justify-content: center; */
+  /* height: 20px;      */
+  /* line-height: 20px;   */
+  /* text-align: center; */
+  /* padding: 0px;  */
+
+}
+
+footer .mainmenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+    /* line-height: 60px; */
+}
+
+/* 메인메뉴 */
+footer .mainmenu > li {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* display: inline-block; */
+  width: 150px;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+  /* border: 1px solid orange; */
+  color: white;
+}
+
+/* footer .mainmenu > li:hover {
+  background-color: cornflowerblue;
+}
+
+footer .mainmenu > li:hover > a {
+  color: white;
+} */
+
+/* 카피 라이트 */
+footer .copy {
+  /* height: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px; */
+  /* border: 1px solid orange; */
+  line-height: 30px;
+}
+
+footer .copy p {
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+}

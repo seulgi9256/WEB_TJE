@@ -1,0 +1,167 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* reset */
+a { text-decoration: none; color: black; }  
+ul { list-style-type: none;}
+
+header {
+  width: 100%;
+  border: 1px solid black;
+}
+
+/* util */
+.util { 
+  height: 40px;
+  padding: 10px; 
+  background-color: #dce6ff;
+}
+
+.util .util-menu { float: right; }
+.util .util-menu li {
+   display: inline-block;
+   margin: 0 14px;
+}
+
+.util .util-menu::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* menu */
+.menu {
+  position: relative;
+  height: 80px;
+}
+
+/* menu-left */
+.menu .menu-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu .menu-left a,
+.menu .menu-right a {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: #6683f6;
+  font-size: 30px;
+  color: white;
+}
+
+/* menu-center */
+.menu .menu-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu .menu-center nav ul li {
+  display: inline-block;
+  height: 80px;
+  line-height: 80px;
+}
+
+.menu .menu-center nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0 32px;
+}
+
+.menu .menu-center nav ul li a:hover {
+  background-color: #668ef6;
+  color: white;
+}
+/* menu-right */
+.menu .menu-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/*  */
+.container3 {
+  display: flex;
+
+  width: 960px;
+  min-height: 400px;
+  margin: 0 auto;
+  border: 3px dashed orange;
+  background-color: white;
+}
+
+.container4 {
+  display: flex;
+  
+  width: 960px;
+  min-height: 400px;
+  margin: 0 auto;
+  border: 3px dashed orange;
+}
+
+.container4 .wrap {
+  background-color: cornflowerblue;
+}
+
+.wrap {
+  width: 960px;
+  height: 480px;
+  margin: 50px auto;
+  border: 3px dashed orange;
+}
+
+.wrap img { 
+  height: 100%;
+  width: 50%; 
+}
+
+.content1 {
+  float: right;
+}
+
+.content2 {
+  float: left;
+}
+
+button {
+  border: none;
+  padding: 14px 28px;
+  /* cursor: pointer; */
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #6683f6;
+  font-size: 15px;
+  color: black;
+  border-radius: 10px;
+
+}
+
+
+/*  footer */
+footer {
+  background-color: black;
+}
+
+
+/* 카피 라이트 */
+.copy {
+  height: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.copy p {
+  font-size: 0.7rem;
+  color: white;
+  text-align: center;
+}

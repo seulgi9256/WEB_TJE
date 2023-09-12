@@ -1,0 +1,165 @@
+/********************************************/
+/* 헤더 영역 */
+header {
+  width: 100%;
+  border: 1px solid black;
+}
+
+/* 로그인, 회원가입 */
+.util { 
+  height: 40px;
+  padding: 10px; 
+  background-color: #dce6ff;
+}
+
+.util .util-menu { float: right; }
+.util .util-menu li {
+   display: inline-block;
+   margin: 0 14px;
+}
+
+.util .util-menu::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* menu */
+.menu {
+  position: relative;
+  height: 60px;
+}
+
+/* menu-left */
+.menu .menu-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu .menu-left a,
+.menu .menu-right a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+/* menu-center */
+.menu .menu-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu .menu-center nav ul li {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.menu .menu-center nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0 32px;
+}
+
+.menu .menu-center nav ul li a:hover {
+  background-color: #668ef6;
+  color: white;
+}
+
+/* menu-right */
+.menu .menu-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/********************************************/
+/* 섹션 1 - 메인 영역 */
+.wrap {
+  width: 960px;
+  height: 480px;
+  margin: 50px auto;
+  /* border: 3px solid orange;   */
+}
+
+/* 슬라이드 */
+.slide {
+  height: 480px;
+}
+
+/* 슬라이드 이미지 */
+.slide img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+
+/* 기본 커스텀 */
+.bx-wrapper {
+  box-shadow: 0 0 0 transparent;
+  border: 0 solid #fff;
+  background-color: #fff;
+}
+
+/************** 페이지네이션 커스텀 **************/
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background-color: rgb(182, 180, 180);
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background-color: black;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  border-radius: 50%;
+}
+
+/************** 네비게이션 화살표 커스텀 **************/
+.bx-wrapper .bx-prev { 
+  background: url(../img/prev.png) no-repeat left center; 
+  background-size: 32px 32px;
+}
+.bx-wrapper .bx-next { 
+  background: url(../img/next.png) no-repeat left center; 
+  background-size: 32px 32px;
+}
+
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus { background-position: 0 0; }
+.bx-wrapper .bx-prev:hover { filter: brightness(60%); }
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus { background-position: 0 0; }
+.bx-wrapper .bx-next:hover { filter: brightness(60%); }
+
+
+/********************************************/
+/* 섹션 2 - 최근 이미지 */
+.box img { 
+  right: 10px;
+  height: 100%;
+  width: 50%; 
+}
+
+.container {
+  /* border-radius: 50%; */
+  border: 1px solid orange;
+
+}
+
+.box {
+  
+  border: 1px solid black;
+}
+
+
